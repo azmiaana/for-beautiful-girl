@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year</title>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif; /* Font elegan serif */
+            background: linear-gradient(135deg, #FFB6C1, #FFF0F5, #E6E6FA); /* Gradien pink pastel mewah */
+            color: #4B0082; /* Indigo untuk kontras elegan */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9); /* Latar belakang semi-transparan untuk efek mewah */
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+            max-width: 600px;
+            width: 90%;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan teks untuk kedalaman */
+        }
+        .kepada {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .pesan {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            white-space: pre-wrap; /* Untuk mempertahankan baris baru */
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            border: 2px solid #FFB6C1;
+            border-radius: 10px;
+            padding: 10px;
+            font-family: inherit;
+            font-size: 1em;
+            background: #FFF0F5;
+            resize: vertical;
+        }
+        button {
+            background: #FFB6C1;
+            color: #4B0082;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #FF69B4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy New Year</h1>
+        <div class="kepada">
+            Kepada: <span id="nama">Orang kuat, orang hebat, yang berhasil bertahan hingga hari ini.</span>
+        </div>
+        <div class="pesan" id="pesan">
+            Hello, precious people! gimana tahun ini? ada beratnya, ada sedihnya, ada kecewanya, ya? tapi, tetap ada bahagianya, kan? tahun ini memang bukan tahun yang sempurna. tapi, kamu berhasil melewati segala rintangan hingga bertahan sampai hari ini, itu hebat banget! proud of you~ pesan dari aku untuk kamu, semoga di tahun esok dan tahun-tahun setelahnya, kamu banyak bahagianya. gapapa kok, nangis sesekali. tapi, jangan lupa bahwa kamu harus bangkit! kamu hebat, dan keren. mohon maaf apabila aku ada salah, ya ♡ semoga hal-hal baik terus menemuimu. kalau kamu sedang terjatuh, tidak apa istirahat dulu sebentar. yang penting, kamu harus bahagia, sehat, dan sukses! okaay? selamat tahun baru, sayang. doa terbaikku selalu menyertaimu.
+        </div>
+        <textarea id="editPesan" placeholder="Ubah pesan di sini..."></textarea><br>
+        <button onclick="updatePesan()">Update Pesan</button>
+    </div>
+    <script>
+        function updatePesan() {
+            const pesanBaru = document.getElementById('editPesan').value;
+            if (pesanBaru.trim()) {
+                document.getElementById('pesan').textContent = pesanBaru;
+                document.getElementById('editPesan').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
